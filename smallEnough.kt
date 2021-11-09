@@ -1,9 +1,14 @@
 fun smallEnough(a : IntArray, limit : Int) : Boolean {
-    var verif: Boolean? = null
-    for(i in a){
-        if(i <= limit) verif = true else verif = false
+    var veriff: Boolean? = null
+    for (i in a){
+        if (i > limit) {
+            veriff = false 
+            break
+        } else {
+            veriff = true
+        }
     }
-    return verif!!
+    return veriff!!
 }
 fun main(){
     smallEnough(intArrayOf(78, 117, 110, 99, 104, 117, 107, 115), 100)
